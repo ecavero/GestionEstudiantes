@@ -19,6 +19,7 @@ public class EstudianteController {
    @GetMapping("/")
    String listarEstudiantes(Model model) {
       List<Estudiante> estudiantes = estudianteRepository.findAll();
+      estudiantes.stream().forEach(e -> System.out.println(e));
       model.addAttribute("estudiantes", estudiantes);
       return "lista-estudiantes";
    }
