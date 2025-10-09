@@ -14,14 +14,14 @@ import lombok.Data;
 public class Estudiante {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   Integer id;
+   private Integer id;
    @Column(length = 100)
-   String nombres;
+   private String nombres;
    @Column(length = 100)
-   String apellidos;
+   private String apellidos;
    @Column(length = 120)
-   String correo;
+   private String correo;
    @Column(length = 80)
-   String carrera;
+   private String carrera;
 
 }
